@@ -1,0 +1,126 @@
+*{
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	max-width: 75rem;
+	margin: 0 auto; 
+	font-size: 1rem;
+	line-height: 1.3;
+	background-color: #ffffff;
+}
+/*BORRAR ESTA INFORMACIÓN*/
+.borrar{
+	text-align: center;
+	font-family: 'ubuntu';
+}
+
+/*Cartas Flexbox*/
+.cik-cards {
+	display: flex;
+	flex-flow: row wrap;
+}
+.cik-card-item {
+	display: flex;
+	width: 100%;
+	padding: 0.5em;
+}
+
+.cik-video{
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding: 1em;
+	width: 100%;
+	height: 360px;
+}
+/* ===== == = === (300px) === = == ===== */
+@media all and (max-width: 200px) {
+	.cik-card-item{
+		width: calc(100% / 12 * 6);
+	}
+}
+/* ===== == = === (900px) === = == ===== */
+@media all and (min-width: 900px) {
+	.cik-card-item{
+		width: calc(100% / 12 * 4);
+	}
+	.cik-video{
+		text-align: center;
+		margin: auto;
+		display: block;
+		padding: 1em;
+		width: 100%;
+		height: 720px;
+	}
+}
+
+.cik-card-body {
+	font-family: 'Metropolis';
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	padding: 0;
+	background-color: #EFEFF2;
+	border-radius: 20px;
+/*   box-shadow: 0 0 5px rgba(0,0,0,0.5);*/
+	transition-duration: 500ms;
+	transition-property: background;
+}
+
+.cik-card-body:hover{
+	background-color: #e5f9d7;
+}
+
+.cik-card-body p {
+	flex: 1 0 auto;
+	margin: 0;
+}
+
+.cik-card-img {
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	position: relative;
+    filter: grayscale(60%);
+    -ms-filter: grayscale(60%); /* IE 9 */
+    -moz-filter: grayscale(60%); /* Firefox */
+    -webkit-filter: grayscale(60%); /* Safari and Chrome */
+	-o-filter: grayscale(60%); /* Opera */
+	transition-duration: 1000ms;
+	transition-property: filter;
+}
+
+.cik-card-img:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -ms-filter: grayscale(0%); /* IE 9 */
+    -moz-filter: grayscale(0%); /* Firefox */
+    -webkit-filter: grayscale(0%); /* Safari and Chrome */
+    -o-filter: grayscale(0%); /* Opera */
+}
+
+.cik-card-titulo,
+.cik-card-texto{
+	padding: 0.5em 1em;
+	margin: 0em;
+}
+
+.cik-card-titulo{
+	/*	background: blue;*/
+	height: 80px;
+	text-transform: uppercase;
+	color: #2F3143;
+	font-family: 'ubuntu';
+	text-align: center;
+}
+
+.cik-card-texto{
+	/*	background: red;*/
+	font-family: 'ubuntu';
+	color: #6B6D7E;
+}
