@@ -7,11 +7,29 @@ html {
 }
 
 body {
-    max-width: 75rem;
-    margin: 0 auto;
     font-size: 1rem;
     line-height: 1.3;
     background-color: #ffffff;
+}
+
+/*Utilidades*/
+.cik-container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.cik-heading-5 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.cik-line {
+    padding-left: 20px;
+    border-left: 5px solid #6bbd45;
 }
 
 /*BORRAR ESTA INFORMACIÓN*/
@@ -20,25 +38,87 @@ body {
     font-family: "ubuntu";
 }
 
-/*Cartas*/
-.cik-cards {
+/*Especificaciones*/
+.cik-specs .cik-cards {
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+.cik-specs .cik-card-item:nth-of-type(1) {
+    grid-column: 1 / 3;
+}
+    
+.cik-specs .cik-card-item:nth-of-type(2) {
+    grid-column: 3 / 6;
+}
+
+.cik-specs .cik-card-item:nth-of-type(3) {
+    grid-column: 1 / 4;
+}
+
+.cik-specs .cik-card-item:nth-of-type(4) {
+    grid-column: 4 / 6;
+}
+
+.cik-specs .cik-card-item {
+    padding: 9px 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 11px 15px 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 11px 15px 0 rgba(0,0,0,.05);
+    overflow: hidden;
+    transition: box-shadow .1s ease;
+}
+
+.cik-specs .cik-card-item:hover {
+    -webkit-box-shadow: 0 11px 15px 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 11px 15px 10px rgba(0,0,0,.05);
+}
+
+@media all and (min-width: 768px) {
+    .cik-specs .cik-card-item {
+        padding: 30px 40px;
+    }
+}
+
+.cik-specs .cik-card-list {
+    position: relative;
+	padding-left: 15px;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.cik-specs .cik-card-list .cik-card-list-item {
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4c4c4c;
+}
+
+/*products*/
+.cik-products .cik-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
     grid-gap: 2rem;
     padding: 1rem;
 }
 
-.cik-card-item {
+.cik-products .cik-card-item {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 20px;
     -webkit-box-shadow: 0 11px 15px 0 rgba(0, 0, 0, .05);
     box-shadow: 0 11px 15px 0 rgba(0,0,0,.05);
-    transition: all .5s ease;
+    transition: box-shadow .1s ease;
 }
 
-.cik-card-item:hover {
+.cik-products .cik-card-item:hover {
     -webkit-box-shadow: 0 11px 15px 10px rgba(0, 0, 0, .05);
     box-shadow: 0 11px 15px 10px rgba(0,0,0,.05);
 }
@@ -64,7 +144,7 @@ body {
     }
 }
 
-.cik-card-body {
+.cik-products .cik-card-body {
     font-family: "Metropolis";
     display: flex;
     flex-direction: column;
@@ -74,12 +154,12 @@ body {
     border-radius: 20px;
 }
 
-.cik-card-body p {
+.cik-products .cik-card-body p {
     flex: 1 0 auto;
     margin: 0;
 }
 
-.cik-card-img {
+.cik-products .cik-card-img {
     width: 100%;
     border-radius: 20px 20px 0 0;
     position: relative;
@@ -92,7 +172,7 @@ body {
     transition-property: filter;
 }
 
-.cik-card-img:hover {
+.cik-products .cik-card-img:hover {
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     -ms-filter: grayscale(0%); /* IE 9 */
@@ -101,13 +181,13 @@ body {
     -o-filter: grayscale(0%); /* Opera */
 }
 
-.cik-card-title,
-.cik-card-text {
+.cik-products .cik-card-title,
+.cik-products .cik-card-text {
     padding: 0.5em 1em;
     margin: 0em;
 }
 
-.cik-card-title {
+.cik-products .cik-card-title {
     height: 80px;
     text-transform: uppercase;
     color: #2f3143;
@@ -115,7 +195,7 @@ body {
     text-align: center;
 }
 
-.cik-card-text {
+.cik-products .cik-card-text {
     font-family: "ubuntu";
     color: #6b6d7e;
 }
