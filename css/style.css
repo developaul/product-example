@@ -1,98 +1,95 @@
-*{
-	box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 100%;
+    font-size: 100%;
 }
 
 body {
-	max-width: 75rem;
-	margin: 0 auto; 
-	font-size: 1rem;
-	line-height: 1.3;
-	background-color: #ffffff;
+    max-width: 75rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.3;
+    background-color: #ffffff;
 }
+
 /*BORRAR ESTA INFORMACIÓN*/
-.borrar{
-	text-align: center;
-	font-family: 'ubuntu';
+.borrar {
+    text-align: center;
+    font-family: "ubuntu";
 }
 
-/*Cartas Flexbox*/
+/*Cartas*/
 .cik-cards {
-	display: flex;
-	flex-flow: row wrap;
-}
-.cik-card-item {
-	display: flex;
-	width: 100%;
-	padding: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    grid-gap: 2rem;
+    padding: 1rem;
 }
 
-.cik-video{
-	text-align: center;
-	margin: auto;
-	display: block;
-	padding: 1em;
-	width: 100%;
-	height: 360px;
+.cik-card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 11px 15px 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 11px 15px 0 rgba(0,0,0,.05);
+    transition: all .5s ease;
 }
-/* ===== == = === (300px) === = == ===== */
-@media all and (max-width: 200px) {
-	.cik-card-item{
-		width: calc(100% / 12 * 6);
-	}
+
+.cik-card-item:hover {
+    -webkit-box-shadow: 0 11px 15px 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 11px 15px 10px rgba(0,0,0,.05);
 }
+
+.cik-video {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding: 1em;
+    width: 100%;
+    height: 360px;
+}
+
 /* ===== == = === (900px) === = == ===== */
 @media all and (min-width: 900px) {
-	.cik-card-item{
-		width: calc(100% / 12 * 4);
-	}
-	.cik-video{
-		text-align: center;
-		margin: auto;
-		display: block;
-		padding: 1em;
-		width: 100%;
-		height: 720px;
-	}
+    .cik-video {
+        text-align: center;
+        margin: auto;
+        display: block;
+        padding: 1em;
+        width: 100%;
+        height: 720px;
+    }
 }
 
 .cik-card-body {
-	font-family: 'Metropolis';
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 100%;
-	padding: 0;
-	background-color: #EFEFF2;
-	border-radius: 20px;
-/*   box-shadow: 0 0 5px rgba(0,0,0,0.5);*/
-	transition-duration: 500ms;
-	transition-property: background;
-}
-
-.cik-card-body:hover{
-	background-color: #e5f9d7;
+    font-family: "Metropolis";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
 }
 
 .cik-card-body p {
-	flex: 1 0 auto;
-	margin: 0;
+    flex: 1 0 auto;
+    margin: 0;
 }
 
 .cik-card-img {
-	width: 100%;
-	border-radius: 20px 20px 0 0;
-	position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    position: relative;
     filter: grayscale(60%);
     -ms-filter: grayscale(60%); /* IE 9 */
     -moz-filter: grayscale(60%); /* Firefox */
     -webkit-filter: grayscale(60%); /* Safari and Chrome */
-	-o-filter: grayscale(60%); /* Opera */
-	transition-duration: 1000ms;
-	transition-property: filter;
+    -o-filter: grayscale(60%); /* Opera */
+    transition-duration: 1000ms;
+    transition-property: filter;
 }
 
 .cik-card-img:hover {
@@ -104,23 +101,21 @@ body {
     -o-filter: grayscale(0%); /* Opera */
 }
 
-.cik-card-titulo,
-.cik-card-texto{
-	padding: 0.5em 1em;
-	margin: 0em;
+.cik-card-title,
+.cik-card-text {
+    padding: 0.5em 1em;
+    margin: 0em;
 }
 
-.cik-card-titulo{
-	/*	background: blue;*/
-	height: 80px;
-	text-transform: uppercase;
-	color: #2F3143;
-	font-family: 'ubuntu';
-	text-align: center;
+.cik-card-title {
+    height: 80px;
+    text-transform: uppercase;
+    color: #2f3143;
+    font-family: "ubuntu";
+    text-align: center;
 }
 
-.cik-card-texto{
-	/*	background: red;*/
-	font-family: 'ubuntu';
-	color: #6B6D7E;
+.cik-card-text {
+    font-family: "ubuntu";
+    color: #6b6d7e;
 }
