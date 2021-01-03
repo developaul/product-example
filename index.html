@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Producto de ejemplo</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -14,14 +15,42 @@
 </head>
 
 <body>
-    <!--Suprimir esto, no es relevante para el código-->
-    <h1 class="borrar">Propuesta de contenido</h1>
+    <!--Presentacion de las caracteristicas-->
+    <section class="cik-features">
+        <div class="cik-container">
+            <h2 class="cik-heading-1"><span>Características</span></h2>
+        </div>
 
+        <div class="cik-banner">
+            <div class="cik-container">
+                <div class="cik-banner-content">
+                    <div class="cik-banner-content-item">
+                        <h3 class="cik-heading-5">Beneficios para montar bicicleta</h3>
 
+                        <div class="cik-body">
+                            <ul class="cik-banner-list">
+                                <li class="cik-banner-list-item">Ayuda a tonificar los m&uacute;sculos y quemar
+                                    calor&iacute;as, permitiendo
+                                    controlar el peso y cuidar la figura.</li>
+                                <li class="cik-banner-list-item">Potenciar las habilidades de coordinaci&oacute;n y
+                                    equilibrio.</li>
+                                <li class="cik-banner-list-item">Mejorar la capacidad pulmonar.</li>
+                                <li class="cik-banner-list-item">Ayuda a desarrollar m&aacute;s el sistema inmunitario.
+                                </li>
+                                <li class="cik-banner-list-item">Estimula la segregaci&oacute;n de endorf&iacute;nas,
+                                    que act&uacute;an a nivel
+                                    cerebral provocando bienestar.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Presentación de las especificaciones -->
-    <div class="cik-specs cik-container">
-        <h3 class="cik-heading-5">Especificaciones</h3>
+    <!--Presentación de las especificaciones -->
+    <section class="cik-specs cik-container">
+        <h3 class="cik-heading-5 cik-text-center">Especificaciones</h3>
 
         <div class="cik-cards">
             <div class="cik-card-item">
@@ -56,20 +85,20 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Presentación de los videos de youtube-->
-    <div class="cik-container">
-        <section class="cik-video">
+    <section class="cik-container">
+        <div class="cik-video">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IkCg8630N-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
             gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!--Presentación de los atributos a manera de tarjetas-->
-    <div class="cik-container cik-products">
-        <section class="cik-cards">
+    <section class="cik-container cik-products">
+        <div class="cik-cards">
             <div class="cik-card-item">
                 <!-- Imagen de la targeta -->
                 <img class="cik-card-img" src="assets/img/Atri_1.jpg" alt="" />
@@ -133,8 +162,8 @@
                     </p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </body>
 
 </html>
