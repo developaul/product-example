@@ -31,23 +31,18 @@
                             <ul class="cik-banner-list">
                                 <li class="cik-banner-list-item">
                                     dolore distinctiout, qui assumenda laudantium quaerat voluptas, ipsam accusantium
-                                    sequi nisi commodi! Ea, ab.
                                 </li>
                                 <li class="cik-banner-list-item">
                                     dolore distinctiout, qui assumenda laudantium quaerat voluptas
-                                    sequi nisi commodi! Ea, ab.
                                 </li>
                                 <li class="cik-banner-list-item">
-                                    dolore distinctiout, qui assumenda laudantium quaerat voluptas, ipsam accusantium
-                                    sequi nisi commodi! Ea, ab.
-                                </li>
-                                <li class="cik-banner-list-item">
-                                    dolore distinctiout, qui assumenda laudantium quaerat voluptas
-                                    sequi nisi commodi! Ea, ab.
+                                    dolore distinctiout, qui assumenda laudantium quaerat sequi nisi commodi! Ea, ab.
                                 </li>
                                 <li class="cik-banner-list-item">
                                     dolore distinctiout, qui assumenda laudantium quaerat voluptas
-                                    sequi nisi commodi! Ea, ab.
+                                </li>
+                                <li class="cik-banner-list-item">
+                                    dolore distinctiout, qui assumenda sequi nisi commodi! Ea, ab.
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +58,7 @@
 
         <div class="cik-cards">
             <div class="cik-card-item">
-                <ul class="cik-card-list cik-line">
+                <ul class="cik-card-list">
                     <li class="cik-card-list-item"><strong>Aro:</strong> 26&quot; - llantas 26*2.10, MTB</li>
                     <li class="cik-card-list-item"><strong>Material de aro:</strong> Aluminio, Doble. 26&quot; 1.75
                         14G 36H, H= 18mm</li>
@@ -71,7 +66,7 @@
             </div>
 
             <div class="cik-card-item">
-                <ul class="cik-card-list cik-line">
+                <ul class="cik-card-list">
                     <li class="cik-card-list-item"><strong>Aro:</strong> 26&quot; - llantas 26*2.10, MTB</li>
                     <li class="cik-card-list-item"><strong>Material de aro:</strong> Aluminio, Doble. 26&quot; 1.75
                         14G 36H, H= 18mm</li>
@@ -79,7 +74,7 @@
             </div>
 
             <div class="cik-card-item">
-                <ul class="cik-card-list cik-line">
+                <ul class="cik-card-list">
                     <li class="cik-card-list-item"><strong>Aro:</strong> 26&quot; - llantas 26*2.10, MTB</li>
                     <li class="cik-card-list-item"><strong>Material de aro:</strong> Aluminio, Doble. 26&quot; 1.75
                         14G 36H, H= 18mm</li>
@@ -87,7 +82,7 @@
             </div>
 
             <div class="cik-card-item">
-                <ul class="cik-card-list cik-line">
+                <ul class="cik-card-list">
                     <li class="cik-card-list-item"><strong>Aro:</strong> 26&quot; - llantas 26*2.10, MTB</li>
                     <li class="cik-card-list-item"><strong>Material de aro:</strong> Aluminio, Doble. 26&quot; 1.75
                         14G 36H, H= 18mm</li>
@@ -99,9 +94,9 @@
     <!--Presentación de los videos de youtube-->
     <section class="cik-container">
         <div class="cik-video">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IkCg8630N-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-            gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
+            <div class="cik-video-image">
+                <div class="cik-buttonMedia" data-micromodal-trigger="modal-1"></div>
+            </div>
         </div>
     </section>
 
@@ -173,6 +168,26 @@
             </div>
         </div>
     </section>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <header class="modal__header">
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <main class="modal__content" id="modal-1-content">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IkCg8630N-Q" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

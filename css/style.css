@@ -73,11 +73,6 @@ body {
     color: #6bbd45;
 }
 
-.cik-line {
-    padding-left: 20px;
-    border-left: 5px solid #6bbd45;
-}
-
 /*Características*/
 .cik-features > .cik-container {
     padding: 1rem;
@@ -132,12 +127,20 @@ body {
 	margin-bottom: 0;            
 }
 
-.cik-features .cik-banner-content .cik-body .cik-banner-list .cik-banner-list-item {
+.cik-features .cik-banner-content .cik-body .cik-banner-list-item {
     position: relative;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.7;
     color: #fff;
+}
+
+
+/* ===== == = === (430px) === = == ===== */
+@media screen and (min-width:430px){
+    .cik-features .cik-banner-content .cik-body .cik-banner-list-item {
+        font-size: 15px;
+    }
 }
 
 .cik-features .cik-banner-content .cik-body .cik-banner-list .cik-banner-list-item::before {
@@ -204,7 +207,7 @@ body {
 
 .cik-specs .cik-card-list {
     position: relative;
-	padding-left: 15px;
+    padding-left: 0;
 	list-style: none;
 	margin-bottom: 0;
 }
@@ -240,6 +243,7 @@ body {
     box-shadow: 0 11px 15px 10px rgba(0,0,0,.05);
 }
 
+/*Video*/
 .cik-video {
     text-align: center;
     margin: auto;
@@ -249,6 +253,24 @@ body {
     height: 360px;
 }
 
+.cik-video .cik-video-image {
+    height: 100%;
+    background-image: url("../assets/img/Atri_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.cik-video .cik-buttonMedia {
+    cursor: pointer;
+    background-image: url('https://images.ctfassets.net/dfhnfm93fvnr/5Su8ljvwJWDaBaUpzQnkqL/14b5b92d04fc7e75ae7011bc683e6272/button_play.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center center;
+    height: 100%;
+}
+
 /* ===== == = === (900px) === = == ===== */
 @media all and (min-width: 900px) {
     .cik-video {
@@ -256,18 +278,19 @@ body {
         margin: auto;
         display: block;
         padding: 1em;
-        width: 100%;
-        height: 720px;
+        width: 75%;
+        height: 480px;
     }
 }
 
+/*Productos*/
 .cik-products .cik-card-body {
     font-family: "Metropolis";
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    padding: 0;
+    padding: 1rem;
     border-radius: 20px;
 }
 
@@ -309,10 +332,185 @@ body {
     text-transform: uppercase;
     color: #2f3143;
     font-family: "ubuntu";
+    font-weight: 500;
     text-align: center;
 }
 
 .cik-products .cik-card-text {
     font-family: "ubuntu";
+    font-weight: 300;
     color: #6b6d7e;
+}
+
+/*Modal*/
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal__container {
+    background-color: #fff;
+    width: 85%;
+    height: 40%;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* ===== == = === (480px) === = == ===== */
+@media screen and (min-width: 480px) {
+    .modal__container {
+        height: 60%;
+    }
+}
+
+/* ===== == = === (768px) === = == ===== */
+@media screen and (min-width: 768px) {
+    .modal__container {
+        height: 75%;
+    }
+}
+
+.modal__header {
+    position: absolute;
+    top: 27%;
+    right: 4%;
+    background: white;
+    padding: 0.3rem;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+/* ===== == = === (430px) === = == ===== */
+@media screen and (min-width: 430px) {
+    .modal__header {
+        top: 28%;
+        right: 4%;
+        padding: 0.5rem;
+    }
+}
+
+/* ===== == = === (480px) === = == ===== */
+@media screen and (min-width: 480px) {
+    .modal__header {
+        top: 17%;
+        right: 5%;
+    }
+}
+
+/* ===== == = === (768px) === = == ===== */
+@media screen and (min-width: 768px) {
+    .modal__header {
+        top: 10%;
+        right: 6%;
+    }
+}
+
+.modal__close {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+  
+.modal__header .modal__close:before { content: "\2715"; }
+  
+.modal__content {
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+    height: 100%;
+}
+  
+.modal__btn {
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #e6e6e6;
+    color: rgba(0,0,0,.8);
+    border-radius: .25rem;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+    will-change: transform;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: -webkit-transform .25s ease-out;
+    transition: transform .25s ease-out;
+    transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+  
+.modal__btn:focus, .modal__btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+  
+.modal__btn-primary {
+    background-color: #00449e;
+    color: #fff;
+}
+  
+/*Animations*/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
 }
