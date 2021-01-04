@@ -85,7 +85,7 @@ body {
 
 .cik-features .cik-banner {
     min-height: 600px;
-    background-image: url('https://images.ctfassets.net/dfhnfm93fvnr/4QZ8n6OmblY8O7eXhXoZ0C/7671743b0a0f90ef7a0779de0068ba63/bicicletas-parallax-bg-1.jpg');
+    background-image: url('https://microless.com/cdn/product_description/3373894_1582605994.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -155,7 +155,8 @@ body {
     grid-template-rows: repeat(4, 1fr);
     padding: 1rem;
 }
-
+  
+/* ===== == = === (480px) === = == ===== */
 @media screen and (min-width:480px) {
     .cik-specs .cik-cards { 
         grid-template-columns: repeat(5, 1fr);
@@ -194,7 +195,7 @@ body {
     box-shadow: 0 11px 15px 10px rgba(0,0,0,.05);
 }
 
-
+/* ===== == = === (768px) === = == ===== */
 @media all and (min-width: 768px) {
     .cik-specs .cik-card-item {
         padding: 30px 40px;
